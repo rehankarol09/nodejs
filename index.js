@@ -9,7 +9,11 @@ console.log("Test",process.env.PORT)
 return res.send("Hello");
 })
 app.get("/first",(req,res)=>{
-    return res.send(`<h1>Hello</h1>`)
+    const data = [{
+        "id":2,
+        "name":"rehan"
+    }]
+    return res.json(data).status(200)
 })
 
 app.listen(process.env.PORT || 8000,()=>{
